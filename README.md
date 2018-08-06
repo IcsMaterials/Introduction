@@ -50,7 +50,7 @@
 
      就理解为是一个命令行/控制台就ok。我们绝大多数的事情都会在这里完成。
      
-    ![bash](img/bash-example.png ''Bash'')
+    ![bash的样子](https://github.com/IcsMaterials/Introduction/blob/master/imgs/bash-example.png)
     
 2. 开启bash和基本的使用
     - 快捷键： Ctrl + Alt + T 「 可以自己设置 」
