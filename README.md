@@ -47,6 +47,12 @@
 - [一个传送门](https://mp.weixin.qq.com/s?__biz=MzI5ODExMDQzNw==&mid=2650738099&idx=2&sn=8d5ed9bcef6dec090fc832e2e3fb8b2a&chksm=f4a17139c3d6f82f7515a54241c8cbd9c1177a9a1401b96082f67240b2ae108ff84439dda3e3&mpshare=1&scene=1&srcid=0806mEjre9YBrTDH6B0WZyH6&pass_ticket=ZsWsrQ%2Bk3h8EWKThRRP1DCRUFgGtXgGsCMgkUeMm824a6HmvWX7Xjg8GWXjWcx1W#rd)
 
 ## 最最基础
+0. 一些固定写法
+    
+    命令名称 <必须参数> 固定参数 [可选参数] 
+    
+    尖括号里一般是必须的参数 方括号里一般是可有可无的参数
+
 1. bash是什么？
 
      就理解为是一个命令行/控制台就ok。我们绝大多数的事情都会在这里完成。
@@ -55,4 +61,62 @@
     
 2. 开启bash和基本的使用
     - 快捷键： Ctrl + Alt + T 「 可以自己设置 」
-    - 切换工作路径
+    - 切换工作路径：*cd \[dir\]*
+    - 显示当前目录下面有什么： *ls \[dir\]*
+    - 新建文件夹： *mkdir \<dirname\>*
+    - 删除东西： *rm [-rf] \<fileORdir...\>*
+        - 参数 -r 表示删除文件夹
+        - 参数 -f 表示强制删除
+    - 复制： cp \<from\> \<to\>
+    - 剪切/重命名： mv \<from\> \<to\>
+    - 查看帮助信息： man <想要查看的指令>
+        - 除了 man 以外， 绝大部分情况下还可以使用 “指令 --help” 或者 “指令 -h” 来查看帮助信息。 如 ls --help
+        - **学会查看帮助文档是很重要的技能！！！**
+
+3. 文本操作
+
+    文本操作分为两种 —— 命令行中的直接操作、图形界面的操作。
+
+    图形界面的话有很多app可以用，如gedit（系统自带）、sublimeText、vsCode等。
+    而命令行中的文本编辑器主要就是vim和emacs。
+
+    gedit是系统自带的文本编辑器，支持给代码上色，什么文件都能开，轻量好用。
+
+    sublimeText是以前很多学长学姐推荐用来在linux环境下写代码的，对于习惯了windows和mac下用IDE的同学们来说，这个还是很友好的。
+
+    vsCode是我个人比较推荐的一个编辑器。熟悉windows环境的同学肯定对和它关系很近的visual studio不陌生。这个编辑器有非常方便的插件管理，功能强大，而且比visual studio要轻量得多。（这篇文就是用vscode写成的hhhh） 大家慢慢的就会明白插件的重要性了！很多插件真的很好用！
+
+    至于命令行中的编辑器，emacs我没用过，vim在后面单独开一章写。
+
+4. 安装新的程序
+
+    这一部分的内容我就以基于Debian的Ubuntu为例。如果是CentOS之类的系统有类似的东西，但是就不过多在这说了。所以下文的linux大家自动认为是ubuntu就好啦x
+
+    很多同学刚接触linux的时候都会很困惑——我安装的程序都去哪里了？ 不像windows中大部分程序都有一个安装包，然后自己指定安装路径，安装完成以后那个exe文件就安静的躺在了路径下面——ubuntu有一个非常方便的包管理器：apt
+
+    想要安装新程序，很简单，一句话就能完成
+    > sudo apt install <想要装的东西...>
+
+    注：sudo 是作为“超级用户”用户运行的意思。具体起到什么效果大家可以去搜搜，很简单。 下面是一个示例
+    > sudo apt install gcc cmake libclang-6.0-dev
+
+    注：上面一行命令安装了gcc、cmake和libclang6的库，也即一次可以安装很多东西。
+
+    除了install以外 apt还支持很多其他命令,如apt list、apt search、apt update、apt upgrade等等，都有不同的用处。具体大家可以 **man apt** 或者百度apt来查看。
+
+    > #### Q: apt装完了的程序去了哪里啊？
+    >> #### A：这是由系统决定的，如果是可执行的程序如gcc，cmake等一般是装在 /usr/bin/ 里面， 如果是库文件和一些头文件(如上面的libclang)，则是在 /usr/lib/ 和 /usr/include/ 路径下
+    > #### Q: 想要卸载包怎么办？找不到要安装的包的名字怎么办？
+    >> #### A: 卸载的话就 sudo apt remove ... ; 想要搜索包的话可以用 apt search <想找的名字> 支持模糊搜索。
+    > #### Q: 我的apt下载安装程序好慢怎么办啊?
+    >> #### A: 可以给apt换下载源，用隔壁的源非常快。 可以使用命令 sudo apt edit-sources 或者 sudo vim /etc/sources.list 来修改。 具体怎么改可以去百度啦。 **改完以后记得运行 sudo apt update 和 sudo apt upgrade**
+    >> ### 另外 系统刚装好的时候也要sudo apt update和sudo apt upgrade一下
+
+# Introduction to VIM
+为什么我一直这么安利vim？因为高效呀！
+
+熟练的使用vim可以让你告别鼠标操作，双手不离开键盘。不仅仅是写程序，而且包括debug、操作文件、运行程序等等一切操作。这对干活的效率是极大的提升。（但是需要一段时间的适应）
+
+vim有很多非常合适我们使用的插件，比如自动补全
+
+
