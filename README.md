@@ -115,8 +115,37 @@
 # Introduction to VIM
 为什么我一直这么安利vim？因为高效呀！
 
-熟练的使用vim可以让你告别鼠标操作，双手不离开键盘。不仅仅是写程序，而且包括debug、操作文件、运行程序等等一切操作。这对干活的效率是极大的提升。（但是需要一段时间的适应）
+vim是linux自带的编辑器，打开控制台，输入vim，就可以开始使用了！熟练的使用vim可以让你告别鼠标操作，双手不离开键盘。不仅仅是写程序，而且包括debug、操作文件、运行程序等等一切操作。这对干活的效率是极大的提升。（但是需要一段时间的适应）
 
-vim有很多非常合适我们使用的插件，比如自动补全
+>vim有自动补全！vim有自动补全！vim有自动补全！
+
+重要的事情说三遍！（插件名字叫YouCompleteMe）
+
+去年我身边的很多同学就是因为linux下没有顺手的自动补全，最后不得不回到了windows里写程序，写完拷贝到linux下面编译运行再debug。真的是令人头秃。之后lab的程序越来越长，自动补全的作用就越来越大。
+
+但是vim的学习历程也不是那么简单的，它需要非常长的时间来适应，用的越久，写代码的效率越高。
+
+下面分享几个关于vim使用的推送吧，是从隔壁偷来的一个初步简单介绍。
+- [第一部分](https://mp.weixin.qq.com/s/X4MKTIx18QMhyq2Pi59Ydw)
+- [第二部分](https://mp.weixin.qq.com/s/00STAsmcZVPQ_AZMKUwWJw)
+- [第三部分](https://mp.weixin.qq.com/s/2Jyk7sTjbgEM8B-A0911sg)
+
+关于vim的使用和自动补全的插件安装，我之后应该会另外写~
+
+
+
+# Introduction to Git
+相信已经有一部分同学了解git的用法啦。
+
+Git是一个开源的分布式版本控制系统。听起来很高级，也有很多高级的运用。不过对于现在的大家来说，可以把git当作一个很方便的“网盘”来使用。
+
+## 安装和初始化配置 git
+很简单 只需要控制台运行
+> <code> sudo apt install git </code>
+
+之后就可以 <code>git --help</code> 查看简单介绍。安装完了以后就要设置基本信息了。没有账号同学们可以去github注册一个账号，然后回来控制台运行
+> git config --global user.name "你的用户名" <p>
+> git config --global user.email "你注册的邮箱" <p>
+> git config --global core.editor vim <p>
 
 
