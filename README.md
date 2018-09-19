@@ -1,8 +1,8 @@
 # **Outline**
-- Linux Installation
-- Survive in Linux
-- Introduction to VIM
-- Introduction to git
+- [Linux Installation](#1)
+- [Survive in Linux](#2)
+- [Introduction to VIM](#3)
+- [Introduction to git](#4)
 
 ## 一点废话：
     
@@ -16,7 +16,7 @@
     
 也不多说了，下面的内容大家就按需自取吧
 
-# **Linux Installation**
+# <h2 id="1">**Linux Installation**</h2>
 如果你是dalao，那就直接跳过这个吧。
 
 对于初次接触linux的人，推荐装ubuntu —— 简单易上手 「16.04和18.04均可」
@@ -41,7 +41,7 @@
     看起来最后还是没得出什么有用的结论呢_(:з」∠)_
 
 
-# **Survive in Linux**
+# <h2 id="2">**Survive in Linux**</h2>
 这个Section主要是介绍一些常用命令吧。
 - [一个传送门](https://mp.weixin.qq.com/s?__biz=MzI5ODExMDQzNw==&mid=2650738099&idx=2&sn=8d5ed9bcef6dec090fc832e2e3fb8b2a&chksm=f4a17139c3d6f82f7515a54241c8cbd9c1177a9a1401b96082f67240b2ae108ff84439dda3e3&mpshare=1&scene=1&srcid=0806mEjre9YBrTDH6B0WZyH6&pass_ticket=ZsWsrQ%2Bk3h8EWKThRRP1DCRUFgGtXgGsCMgkUeMm824a6HmvWX7Xjg8GWXjWcx1W#rd)
 
@@ -111,7 +111,7 @@
     >> #### A: 可以给apt换下载源，用隔壁的源非常快。 可以使用命令 <code>sudo apt edit-sources</code> 或者 sudo vim /etc/sources.list 来修改。 具体怎么改可以去百度啦。 **改完以后记得运行 <code>sudo apt update</code> 和 <code>sudo apt upgrade</code>**
     >> ### 另外 系统刚装好的时候也要sudo apt update和sudo apt upgrade一下
 
-# Introduction to VIM
+# <h2 id="3">**Introduction to VIM**</h2>
 为什么我一直这么安利vim？因为高效呀！
 
 vim是linux自带的编辑器，打开控制台，输入vim，就可以开始使用了！熟练的使用vim可以让你告别鼠标操作，双手不离开键盘。不仅仅是写程序，而且包括debug、操作文件、运行程序等等一切操作。这对干活的效率是极大的提升。（但是需要一段时间的适应）
@@ -133,7 +133,7 @@ vim是linux自带的编辑器，打开控制台，输入vim，就可以开始使
 
 
 
-# Introduction to Git
+# <h2 id="4">**Introduction to Git**</h2>
 相信已经有一部分同学了解git的用法啦。
 
 Git是一个开源的分布式版本控制系统。听起来很高级，也有很多高级的运用。不过对于现在的大家来说，可以把git当作一个很方便的“网盘”来使用。
