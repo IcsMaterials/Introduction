@@ -176,9 +176,11 @@ Git是一个开源的分布式版本控制系统。听起来很高级，也有�
 ![第一次git status](https://github.com/IcsMaterials/Introduction/blob/master/imgs/gitStatus2.JPG)
 <p>
 git add 之后的 git status：从红色变成了绿色
+
 ![git add之后的status](https://github.com/IcsMaterials/Introduction/blob/master/imgs/gitStatus3.JPG)
 <p>
 git commit后出来的界面
+
 ![git commit界面](https://github.com/IcsMaterials/Introduction/blob/master/imgs/gitCommit.JPG)
 亦可以使用 <code>git commit [-m \<"commit message"\>] [filename...]</code> 来指定需要commit的文件和直接留下修改信息
 
